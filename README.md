@@ -86,11 +86,33 @@ The datafile looks like...
 
 ## Model Accuracy
 
-Going through testing, the model has deplorable accuracy, being at about 0-66% in the first two stages. But, in stage 3, after implementing the Boolean variable features in place of the original suite and card features alone, the accuracy jumped to perfect or near perfect. Below shows the confusion matrix and accuracy of the model, along with its precision and handle.
+Going through testing, the model has deplorable accuracy, being at about 0-66% in the first two stages. But, in stage 3, after implementing the Boolean variable features in place of the original suite and card features alone, the accuracy jumped to perfect or near perfect. Below shows the [confusion matrix](https://towardsdatascience.com/performance-metrics-confusion-matrix-precision-recall-and-f1-score-a8fe076a2262/) and accuracy of the model, along with its precision and handle.
+
+> **Precision**: Out of all the positive predicted, what percentage is truly positive.
+> **Recall**: Out of the total positive, what percentage are predicted positive.
 
 ![Accuracy Description](https://github.com/aadhavjawahar-sys/Poker_hand_predictor/blob/main/images/DecisionTree_3.png)
 
+>> I was able to get similar accuracy with 1/10 of the training data (100,000 datapoints), showing the quick learning and efficiency of the model
+
 ***
 
+## Demonstration of Working Model
 
-Also show that you tried 100,000 elements and it still worked with good accuracy (1/10 of original data)
+In order to interact with my model, I built a simple graphical user interface system. Initially, the user sees this page with several input boxes, asking for both the suite and card # classification.
+
+![Input Boxes](https://github.com/aadhavjawahar-sys/Poker_hand_predictor/blob/main/images/DecisionTree_4.png)
+
+After selecting the desired classifications, hit the ***submit*** button.
+
+![Submit](https://github.com/aadhavjawahar-sys/Poker_hand_predictor/blob/main/images/DecisionTree_5.png)
+
+Finally, take a look at the predicted hand section on the gradio page.
+
+![Answer?](https://github.com/aadhavjawahar-sys/Poker_hand_predictor/blob/main/images/DecisionTree_6.png)
+
+***
+
+## Future Direction
+
+IF I have more time to work on developing this model, I would likely tidy up the GUI, making it so you can choose to add cards. If I can attain more datasets featuring the best hands with fewer cards, I would like to add that to the model. My hope is that people new to poker would be able to experiment with diversifying their hands and better learning the classifications of each hand. Thanks for reading!
