@@ -10,7 +10,7 @@ Given its widespread influence, I decided to make a model, focusing in on making
 
 ***
 
-## Data Processing
+## Data Acquisition
 
 The poker hand .data files were acquired from UCI's [machine learning repository](https://archive.ics.uci.edu/dataset/158/poker+hand). The page my data came from, Poker Hand, has 10 features (the suite and card # as separate features for 5 cards). The predicted target variable is the CLASS of the hand, which is basically the name of the best hand.
 
@@ -62,6 +62,21 @@ Feature and Target variable breakdown from the Poker Hand dataset.
 
 The training-true data file contained approximately 25,000 datapoints of the 5 cards suite and #. The testing data has 1m+ datapoints. This leads me to suspect that they misnamed the datafiles, so I used the training data as testing data and the testing data for training data, swapping them.
 
+## Data processing and parsing
+
+When creating my Decision Tree model, I decided to *alter* the standard features to better fit my choice of model. 
+
+When classifying hands, it is important to know whether or not **suites** of cards match. So, I created 10 Boolean variables (S1==S2, S2==S5, etc.) that are true or false depending on whether the suites of respective cards match. Consequently, I removed the suite features as they were now unnecessary for classifying a hand. 
+
+> Despite this, my model was still relatively inaccurate, getting stuck at a low 60% accuracy.
+
+Next, I created a similar Boolean matching system, but for the cards (C1==C2, C1=C3, etc.) to aid the models classification.
+
+> I *didn't* get rid of the card feature since it would still be necessary for classification.
+
+Below is the short python script I used to parse and manipulate the original dataset.
+
+![Parsing script](https://github.com/aadhavjawahar-sys/Bank_Loan_Prediction/blob/main/images/Loan_file_display.png)
 ***
 
 ## Model Accuracy
