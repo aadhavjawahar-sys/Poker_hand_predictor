@@ -77,9 +77,20 @@ Next, I created a similar Boolean matching system, but for the cards (C1==C2, C1
 Below is the short python script I used to parse and manipulate the original dataset.
 
 ![Parsing script](https://github.com/aadhavjawahar-sys/Poker_hand_predictor/blob/main/images/DecisionTree_1.png)
+
+The datafile looks like...
+
+![Data File Here](https://github.com/aadhavjawahar-sys/Poker_hand_predictor/blob/main/images/DecisionTree_2.png)
+
 ***
 
 ## Model Accuracy
+
+Going through testing, the model has deplorable accuracy, being at about 0-66% in the first two stages. But, in stage 3, after implementing the Boolean variable features in place of the original suite and card features alone, the accuracy jumped to perfect or near perfect. Below shows the confusion matrix and accuracy of the model, along with its precision and handle.
+
+![Accuracy Description](https://github.com/aadhavjawahar-sys/Poker_hand_predictor/blob/main/images/DecisionTree_3.png)
+
+***
 
 
 Also show that you tried 100,000 elements and it still worked with good accuracy (1/10 of original data)
