@@ -76,7 +76,7 @@ Next, I created a similar Boolean matching system, but for the cards (C1==C2, C1
 
 Below is the short python script I used to parse and manipulate the original dataset.
 
-![Parsing script](https://github.com/aadhavjawahar-sys/Bank_Loan_Prediction/blob/main/images/Loan_file_display.png)
+![Parsing script](https://github.com/aadhavjawahar-sys/Poker_hand_predictor/blob/main/images/DecisionTree_1.png)
 ***
 
 ## Model Accuracy
